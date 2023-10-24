@@ -1,0 +1,38 @@
+<nav class="navbar" style="background-color: #26a2b6;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" style="color:black;">
+      <img src="https://i.pinimg.com/originals/d8/75/dd/d875dd64c1776675456cd24d036cfd52.png" alt="" width="30px" class="d-inline-block ">
+      TV Series
+    </a>
+  </div>
+</nav>
+
+<div class="container" id="tabla" style="margin: 20px;">
+  <div class="row">
+    <div class="col-md-6">
+      <table class="table table-active">
+        <thead style="background-color: white;">
+          <tr>
+            <th><b>#</b></th>
+            <th><b>Name</b></th>
+            <th><b>Channel</b></th>
+            <th><b>Seasons</b></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ser of series; let i = index">
+            <td><b>{{i + 1}}</b></td>
+            <td>
+              <a [href]="ser.linkWebPage">{{ser.name}}</a>
+            </td>
+            <td>{{ser.channel}}</td>
+            <td>{{ser.seasons}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Seasons Average: {{promedioTemporadas}}</p>
+    </div>
+    <div class="col-md-6" id="serieDetails" style="width: 50rem;">
+    </div>
+  </div>
+</div>
